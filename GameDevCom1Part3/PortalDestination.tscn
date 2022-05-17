@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PortalDestination.gd" type="Script" id=2]
+
+[node name="PortalDestination" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.137255, 0, 1 )
+scale = Vector2( 0.5, 0.5 )

@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://snowTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://NextLevel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pies.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MovingPlatform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://LevelMusic.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World1.gd" type="Script" id=10]
+[ext_resource path="res://level1_1.png" type="Texture" id=11]
+[ext_resource path="res://fallzone.tscn" type="PackedScene" id=12]
+[ext_resource path="res://wall.tscn" type="PackedScene" id=13]
+
+[node name="World1" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 519, 307 )
+scale = Vector2( 0.806562, 0.844104 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -262129, 0, 0, -262128, 1, 0, -262127, 2, 0, -196593, 3, 0, -196592, 4, 0, -196591, 5, 0, -131060, 0, 0, -131059, 2, 0, -131057, 3, 0, -131056, 4, 0, -131055, 5, 0, -65524, 3, 0, -65523, 5, 0, -65521, 3, 0, -65520, 4, 0, -65519, 5, 0, 65533, 9, 0, 65534, 10, 0, 65535, 11, 0, 12, 3, 0, 13, 5, 0, 15, 3, 0, 16, 4, 0, 17, 5, 0, 65547, 9, 0, 65548, 4, 0, 65549, 5, 0, 65551, 3, 0, 65552, 4, 0, 65553, 5, 0, 196599, 9, 0, 196600, 10, 0, 196601, 10, 0, 196602, 11, 0, 131084, 3, 0, 131085, 5, 0, 131087, 3, 0, 131088, 4, 0, 131089, 5, 0, 196617, 9, 0, 196618, 1, 0, 196619, 1, 0, 196620, 4, 0, 196621, 5, 0, 196623, 3, 0, 196624, 4, 0, 196625, 5, 0, 327664, 9, 0, 327665, 10, 0, 327666, 10, 0, 327667, 10, 0, 327668, 11, 0, 262156, 3, 0, 262157, 5, 0, 262159, 3, 0, 262160, 4, 0, 262161, 5, 0, 327692, 3, 0, 327693, 5, 0, 327695, 3, 0, 327696, 4, 0, 327697, 5, 0, 393228, 3, 0, 393229, 5, 0, 393231, 3, 0, 393232, 4, 0, 393233, 5, 0, 458764, 3, 0, 458765, 5, 0, 458767, 3, 0, 458768, 4, 0, 458769, 5, 0, 589804, 0, 0, 589805, 1, 0, 589806, 1, 0, 589807, 1, 0, 589808, 1, 0, 589809, 1, 0, 589810, 1, 0, 589811, 1, 0, 589812, 1, 0, 589813, 1, 0, 589814, 1, 0, 589815, 1, 0, 589816, 1, 0, 589817, 1, 0, 589818, 2, 0, 524300, 3, 0, 524301, 5, 0, 524303, 3, 0, 524304, 4, 0, 524305, 5, 0, 655340, 3, 0, 655341, 4, 0, 655342, 4, 0, 655343, 4, 0, 655344, 4, 0, 655345, 4, 0, 655346, 4, 0, 655347, 4, 0, 655348, 4, 0, 655349, 4, 0, 655350, 4, 0, 655351, 4, 0, 655352, 4, 0, 655353, 4, 0, 655354, 5, 0, 655357, 0, 0, 655358, 1, 0, 655359, 1, 0, 589825, 0, 0, 589826, 1, 0, 589827, 1, 0, 589828, 2, 0, 589836, 3, 0, 589837, 5, 0, 589839, 3, 0, 589840, 4, 0, 589841, 5, 0, 720876, 6, 0, 720877, 8, 0, 720878, 8, 0, 720879, 8, 0, 720880, 8, 0, 720881, 8, 0, 720882, 8, 0, 720883, 8, 0, 720884, 8, 0, 720885, 8, 0, 720886, 8, 0, 720887, 8, 0, 720888, 8, 0, 720889, 8, 0, 720890, 7, 0, 720893, 6, 0, 720894, 8, 0, 720895, 8, 0, 655361, 3, 0, 655362, 8, 0, 655363, 8, 0, 655364, 7, 0, 655372, 6, 0, 655373, 7, 0, 655375, 6, 0, 655376, 8, 0, 655377, 7, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="blue" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/blue"]
+position = Vector2( -483, -604 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="NextLevel" parent="." instance=ExtResource( 4 )]
+position = Vector2( 944, 148 )
+next_world = "res://World2.tscn"
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 321, 496 )
+
+[node name="Coin2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 342, 339 )
+
+[node name="Pies" parent="." instance=ExtResource( 6 )]
+position = Vector2( 750, 366 )
+
+[node name="Pies2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 468, 534 )
+
+[node name="MovingPlatform" parent="." instance=ExtResource( 7 )]
+position = Vector2( 666, 499 )
+move_speed = 0.5
+
+[node name="LevelMusic" parent="." instance=ExtResource( 8 )]
+
+[node name="Enemy" parent="." instance=ExtResource( 9 )]
+position = Vector2( 484, 285 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 26, 485 )
+
+[node name="fallzone" parent="." instance=ExtResource( 12 )]
+next_world = "res://World1.tscn"
+
+[node name="Enemy4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 477, 429 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 252, 490 )
+
+[node name="wall" parent="." instance=ExtResource( 13 )]
+position = Vector2( -49, -45 )
+
+[node name="wall2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1074, -63 )
